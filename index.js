@@ -16,8 +16,9 @@ admin.initializeApp({
 
 const db = admin.database();
 const bucket = admin.storage().bucket();
+const dbRefPath = "/test/banometer/photos/jorbu/";
 
-const dbRef = db.ref("/test/banometer/photos/jorbu/");
+const dbRef = db.ref(dbRefPath);
 
 dbRef.on("child_added", async function(snapshot) {
     if (!snapshot.val().url) {
@@ -44,3 +45,5 @@ dbRef.on("child_added", async function(snapshot) {
             });
     }
 });
+
+console.log(`Listening for new requests on ${dbRefPath}`);
