@@ -1,0 +1,12 @@
+[Unit]
+Description=Banometer photo snagger
+After=multi-user.target
+
+[Service]
+Type=idle
+EnvironmentFile=/etc/systemd/user/photo-snagger.env
+WorkingDirectory=/home/pi/banometer-photo-snagger/
+ExecStart=/usr/bin/node /home/pi/banometer-photo-snagger/index.js
+
+[Install]
+WantedBy=multi-user.target
