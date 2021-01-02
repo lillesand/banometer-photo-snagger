@@ -1,7 +1,7 @@
 import { StillCamera } from "pi-camera-connect";
 import admin from "firebase-admin";
 import stream from "stream";
-import { firebaseAuth } from './config';
+import { firebaseAuth } from './config.js';
 
 const stillCamera = new StillCamera({
     width: 640,
