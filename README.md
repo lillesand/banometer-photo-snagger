@@ -14,7 +14,7 @@
 
 ### Install as service
 
-1. Symlink `photo-snagger.service` to systemd: `ln -s /home/pi/banometer-photo-snagger/photo-snagger.service /etc/systemd/system/photo-snagger.service`
+1. Symlink `photo-snagger.service` to systemd: `sudo ln -s /home/pi/banometer-photo-snagger/photo-snagger.service /etc/systemd/system/photo-snagger.service`
 2. Reload systemd: `sudo systemctl daemon-reload`
 3. Enable autostart on boot: `sudo systemctl enable photo-snagger`
 4. Start: `sudo systemctl start photo-snagger`
