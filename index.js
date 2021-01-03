@@ -16,7 +16,7 @@ admin.initializeApp({
 
 const db = admin.database();
 const bucket = admin.storage().bucket();
-const dbRefPath = "/test/banometer/photos/jorbu/";
+const dbRefPath = "/photos/jorbu";
 
 const dbRef = db.ref(dbRefPath);
 
