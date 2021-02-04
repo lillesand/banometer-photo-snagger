@@ -1,11 +1,12 @@
-import { StillCamera } from "pi-camera-connect";
+import { ExposureMode, StillCamera } from "pi-camera-connect";
 import admin from "firebase-admin";
 import stream from "stream";
 import { firebaseAuth } from './config.js';
 
 const stillCamera = new StillCamera({
     width: 1280,
-    height: 960
+    height: 960,
+    exposureMode: ExposureMode.Snow
 });
 
 admin.initializeApp({
